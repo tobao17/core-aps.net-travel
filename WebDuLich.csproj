@@ -1,0 +1,225 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-WebDuLich-A526F1CD-9BFA-4429-A057-7D94C1F26594</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191207110527_database.cs" />
+    <Compile Remove="Migrations\20191207110527_database.Designer.cs" />
+    <Compile Remove="Migrations\20191207111437_WebDuLich.cs" />
+    <Compile Remove="Migrations\20191207111437_WebDuLich.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Travel_share\fonts\beyond_the_mountains.otf" />
+    <None Include="wwwroot\Travel_share\fonts\beyond_the_mountains.ttf" />
+    <None Include="wwwroot\Travel_share\images\about_background.jpg" />
+    <None Include="wwwroot\Travel_share\images\add.jpg" />
+    <None Include="wwwroot\Travel_share\images\backpack.png" />
+    <None Include="wwwroot\Travel_share\images\bicycle.png" />
+    <None Include="wwwroot\Travel_share\images\blog_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\blog_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\blog_3.jpg" />
+    <None Include="wwwroot\Travel_share\images\blog_background.jpg" />
+    <None Include="wwwroot\Travel_share\images\bus.png" />
+    <None Include="wwwroot\Travel_share\images\compass.png" />
+    <None Include="wwwroot\Travel_share\images\contact.png" />
+    <None Include="wwwroot\Travel_share\images\contact_background.jpg" />
+    <None Include="wwwroot\Travel_share\images\cruise.png" />
+    <None Include="wwwroot\Travel_share\images\cta.jpg" />
+    <None Include="wwwroot\Travel_share\images\departure.png" />
+    <None Include="wwwroot\Travel_share\images\diving.png" />
+    <None Include="wwwroot\Travel_share\images\dropdown.png" />
+    <None Include="wwwroot\Travel_share\images\elements_background.jpg" />
+    <None Include="wwwroot\Travel_share\images\footer_blog_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\footer_blog_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\footer_blog_3.jpg" />
+    <None Include="wwwroot\Travel_share\images\gallery_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\gallery_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\gallery_3.jpg" />
+    <None Include="wwwroot\Travel_share\images\gallery_4.jpg" />
+    <None Include="wwwroot\Travel_share\images\gallery_5.jpg" />
+    <None Include="wwwroot\Travel_share\images\gallery_6.jpg" />
+    <None Include="wwwroot\Travel_share\images\home_slider.jpg" />
+    <None Include="wwwroot\Travel_share\images\icon_1.png" />
+    <None Include="wwwroot\Travel_share\images\icon_2.png" />
+    <None Include="wwwroot\Travel_share\images\icon_3.png" />
+    <None Include="wwwroot\Travel_share\images\intro.png" />
+    <None Include="wwwroot\Travel_share\images\intro_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\intro_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\intro_3.jpg" />
+    <None Include="wwwroot\Travel_share\images\island.png" />
+    <None Include="wwwroot\Travel_share\images\island_t.png" />
+    <None Include="wwwroot\Travel_share\images\kayak.png" />
+    <None Include="wwwroot\Travel_share\images\latest_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\latest_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\latest_3.jpg" />
+    <None Include="wwwroot\Travel_share\images\latest_4.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_3.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_4.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_5.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_6.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_7.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_8.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_9.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_gallery_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_hotel.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_thumb_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_thumb_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_thumb_3.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_thumb_4.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_thumb_5.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_thumb_6.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_thumb_7.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_thumb_8.jpg" />
+    <None Include="wwwroot\Travel_share\images\listing_thumb_9.jpg" />
+    <None Include="wwwroot\Travel_share\images\logo.png" />
+    <None Include="wwwroot\Travel_share\images\man.png" />
+    <None Include="wwwroot\Travel_share\images\message.svg" />
+    <None Include="wwwroot\Travel_share\images\milestone_1.png" />
+    <None Include="wwwroot\Travel_share\images\milestone_2.png" />
+    <None Include="wwwroot\Travel_share\images\milestone_3.png" />
+    <None Include="wwwroot\Travel_share\images\milestone_4.png" />
+    <None Include="wwwroot\Travel_share\images\nav_next.svg" />
+    <None Include="wwwroot\Travel_share\images\nav_prev.svg" />
+    <None Include="wwwroot\Travel_share\images\nav_rect.svg" />
+    <None Include="wwwroot\Travel_share\images\next.png" />
+    <None Include="wwwroot\Travel_share\images\offer_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\offer_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\offer_3.jpg" />
+    <None Include="wwwroot\Travel_share\images\offer_4.jpg" />
+    <None Include="wwwroot\Travel_share\images\offer_5.jpg" />
+    <None Include="wwwroot\Travel_share\images\offer_6.jpg" />
+    <None Include="wwwroot\Travel_share\images\offer_7.jpg" />
+    <None Include="wwwroot\Travel_share\images\offer_8.jpg" />
+    <None Include="wwwroot\Travel_share\images\phone-call.svg" />
+    <None Include="wwwroot\Travel_share\images\placeholder.svg" />
+    <None Include="wwwroot\Travel_share\images\planet-earth.svg" />
+    <None Include="wwwroot\Travel_share\images\post.png" />
+    <None Include="wwwroot\Travel_share\images\prev.png" />
+    <None Include="wwwroot\Travel_share\images\review_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\review_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\room_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\room_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\sailboat.png" />
+    <None Include="wwwroot\Travel_share\images\search.png" />
+    <None Include="wwwroot\Travel_share\images\search.svg" />
+    <None Include="wwwroot\Travel_share\images\single_background.jpg" />
+    <None Include="wwwroot\Travel_share\images\stats_1.png" />
+    <None Include="wwwroot\Travel_share\images\stats_2.png" />
+    <None Include="wwwroot\Travel_share\images\stats_3.png" />
+    <None Include="wwwroot\Travel_share\images\stats_4.png" />
+    <None Include="wwwroot\Travel_share\images\suitcase.png" />
+    <None Include="wwwroot\Travel_share\images\test_1.jpg" />
+    <None Include="wwwroot\Travel_share\images\test_2.jpg" />
+    <None Include="wwwroot\Travel_share\images\test_3.jpg" />
+    <None Include="wwwroot\Travel_share\images\trend_1.png" />
+    <None Include="wwwroot\Travel_share\images\trend_2.png" />
+    <None Include="wwwroot\Travel_share\images\trend_3.png" />
+    <None Include="wwwroot\Travel_share\images\trend_4.png" />
+    <None Include="wwwroot\Travel_share\images\trend_5.png" />
+    <None Include="wwwroot\Travel_share\images\trend_6.png" />
+    <None Include="wwwroot\Travel_share\images\trend_7.png" />
+    <None Include="wwwroot\Travel_share\images\trend_8.png" />
+    <None Include="wwwroot\Travel_share\js\about_custom.js" />
+    <None Include="wwwroot\Travel_share\js\blog_custom.js" />
+    <None Include="wwwroot\Travel_share\js\contact_custom.js" />
+    <None Include="wwwroot\Travel_share\js\custom.js" />
+    <None Include="wwwroot\Travel_share\js\elements_custom.js" />
+    <None Include="wwwroot\Travel_share\js\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\Travel_share\js\offers_custom.js" />
+    <None Include="wwwroot\Travel_share\js\single_listing_custom.js" />
+    <None Include="wwwroot\Travel_share\plugins\colorbox\colorbox.css" />
+    <None Include="wwwroot\Travel_share\plugins\colorbox\images\border.png" />
+    <None Include="wwwroot\Travel_share\plugins\colorbox\images\controls.png" />
+    <None Include="wwwroot\Travel_share\plugins\colorbox\images\loading.gif" />
+    <None Include="wwwroot\Travel_share\plugins\colorbox\images\loading_background.png" />
+    <None Include="wwwroot\Travel_share\plugins\colorbox\images\overlay.png" />
+    <None Include="wwwroot\Travel_share\plugins\colorbox\jquery.colorbox-min.js" />
+    <None Include="wwwroot\Travel_share\plugins\easing\easing.js" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\css\font-awesome.css" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\animated.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\core.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\icons.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\larger.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\list.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\path.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\less\variables.less" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="wwwroot\Travel_share\plugins\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="wwwroot\Travel_share\plugins\greensock\animation.gsap.min.js" />
+    <None Include="wwwroot\Travel_share\plugins\greensock\ScrollToPlugin.min.js" />
+    <None Include="wwwroot\Travel_share\plugins\greensock\TimelineMax.min.js" />
+    <None Include="wwwroot\Travel_share\plugins\greensock\TweenMax.min.js" />
+    <None Include="wwwroot\Travel_share\plugins\Isotope\isotope.pkgd.min.js" />
+    <None Include="wwwroot\Travel_share\plugins\jquery-circle-progress-1.2.2\circle-progress.js" />
+    <None Include="wwwroot\Travel_share\plugins\OwlCarousel2-2.2.1\ajax-loader.gif" />
+    <None Include="wwwroot\Travel_share\plugins\OwlCarousel2-2.2.1\animate.css" />
+    <None Include="wwwroot\Travel_share\plugins\OwlCarousel2-2.2.1\owl.carousel.css" />
+    <None Include="wwwroot\Travel_share\plugins\OwlCarousel2-2.2.1\owl.carousel.js" />
+    <None Include="wwwroot\Travel_share\plugins\OwlCarousel2-2.2.1\owl.theme.default.css" />
+    <None Include="wwwroot\Travel_share\plugins\OwlCarousel2-2.2.1\owl.video.play.png" />
+    <None Include="wwwroot\Travel_share\plugins\parallax-js-master\parallax.min.js" />
+    <None Include="wwwroot\Travel_share\plugins\progressbar\progressbar.min.js" />
+    <None Include="wwwroot\Travel_share\plugins\scrollmagic\ScrollMagic.min.js" />
+    <None Include="wwwroot\Travel_share\styles\about_responsive.css" />
+    <None Include="wwwroot\Travel_share\styles\about_styles.css" />
+    <None Include="wwwroot\Travel_share\styles\blog_responsive.css" />
+    <None Include="wwwroot\Travel_share\styles\blog_styles.css" />
+    <None Include="wwwroot\Travel_share\styles\bootstrap4\bootstrap.min.css" />
+    <None Include="wwwroot\Travel_share\styles\bootstrap4\bootstrap.min.js" />
+    <None Include="wwwroot\Travel_share\styles\bootstrap4\popper.js" />
+    <None Include="wwwroot\Travel_share\styles\contact_responsive.css" />
+    <None Include="wwwroot\Travel_share\styles\contact_styles.css" />
+    <None Include="wwwroot\Travel_share\styles\elements_responsive.css" />
+    <None Include="wwwroot\Travel_share\styles\elements_styles.css" />
+    <None Include="wwwroot\Travel_share\styles\main_styles.css" />
+    <None Include="wwwroot\Travel_share\styles\offers_responsive.css" />
+    <None Include="wwwroot\Travel_share\styles\offers_styles.css" />
+    <None Include="wwwroot\Travel_share\styles\responsive.css" />
+    <None Include="wwwroot\Travel_share\styles\single_listing_responsive.css" />
+    <None Include="wwwroot\Travel_share\styles\single_listing_styles.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+  </ItemGroup>
+
+</Project>
