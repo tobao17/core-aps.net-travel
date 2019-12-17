@@ -53,7 +53,6 @@ C:\Users\ww\Desktop\WebDuLich\bin\Debug\netcoreapp2.1\WebDuLich.Views.pdb
 C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\WebDuLich.csprojAssemblyReference.cache
 C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\WebDuLich.RazorAssemblyInfo.cache
 C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\WebDuLich.RazorAssemblyInfo.cs
-C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\WebDuLich.AssemblyInfoInputs.cache
 C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\WebDuLich.AssemblyInfo.cs
 C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\WebDuLich.TagHelpers.input.cache
@@ -91,3 +90,7 @@ C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Ad
 C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Sharelayout.cshtml.g.cs
 C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\Razor\Views\Tours\booking.cshtml.g.cs
 C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\Razor\Views\Login\dangnhap.cshtml.g.cs
+C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\Razor\Views\Login\quenmatkhau.cshtml.g.cs
+C:\Users\ww\Desktop\WebDuLich\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

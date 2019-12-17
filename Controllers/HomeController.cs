@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebDuLich.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace WebDuLich.Controllers
 {
@@ -12,6 +13,11 @@ namespace WebDuLich.Controllers
     {
         public IActionResult Index()
         {
+             string t=HttpContext.Session.GetString("hoten");
+            if (t!=null)
+            {
+                t = "chung ta khong thuoc ve nhau";
+            }
             return View();
         }
 

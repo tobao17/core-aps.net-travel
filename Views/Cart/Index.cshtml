@@ -1,12 +1,28 @@
-﻿@*@using WebDuLich.Models.DataModel*@
-@model IEnumerable<WebDuLich.Models.DataModel.ViewModel>;
+﻿@using WebDuLich.Models.DataModel
+@model IEnumerable<ChiTietDatTour>
+@*@model IEnumerable<WebDuLich.Models.DataModel.ViewModel>;*@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Sharelayout.cshtml";
 }
-
+<style>
+    li.offers_icons_item{
+        display: block;
+    }
+    li.offers_icons_item span{
+        font-weight: bold;
+        color: red;
+    }
+    .offers_content p{
+        font-size: 25px;
+        font-weight: bold;
+        color: black;
+    }
+</style>
 @foreach (var item in Model)
 {
+    if (item.DatTour.MaKH == 1)
+    {
         <div class="offers_item rating_4" style="margin-top:100px">
             <div class="row">
                 <div class="col-lg-1 temp_col"></div>
@@ -14,8 +30,8 @@
                     <div class="offers_image_container">
 
                         <div class="offers_image_background"
-                             style="background-image: url('@Url.Content("~/Travel_share/images/"+item.tuyenDuong.Anh)'); "></div>
-                        <div class="offer_name"><a href="single_listing.html"></a></div>
+                             style="background-image: url('@Url.Content("~/Travel_share/images/"+item.Tour.TuyenDuong.Anh)'); "></div>
+                        <div class="offer_name"><a href="single_listing.html">@item.Tour.TuyenDuong.TenTuyenDuong</a></div>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -25,41 +41,31 @@
 
                         </div>
                         <span class="offers_text"></span>
-                        <p class="offers_text">
-                            Suspendisse potenti. In faucibus massa. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.
-
+                        <p>
+                            <span>Giá Tour: </span>@item.Tour.GiaTour$
                         </p>
                         <div class="offers_icons">
                             <ul class="offers_icons_list">
                                 <li class="offers_icons_item">
-                                    <img src="~/Travel_share/images/post.png" alt="">
+                                    <span>Ngày khởi hành: </span>@item.Tour.NgayKhoiHanh
                                 </li>
                                 <li class="offers_icons_item">
-                                    <img src="~/Travel_share/images/compass.png" alt="">
+                                    <span>Ngày kết thúc: </span>@item.Tour.NgayKetThuc
                                 </li>
                                 <li class="offers_icons_item">
-                                    <img src="~/Travel_share/images/bicycle.png" alt="">
-                                </li>
-                                <li class="offers_icons_item">
-                                    <img src="~/Travel_share/images/sailboat.png" alt="">
+                                    <span>Giờ đi: </span>@item.Tour.GioDi
                                 </li>
                             </ul>
                         </div>
                         <div class="button book_button">
                             <a href="">Delete<span></span><span></span><span></span></a>
-                        </div>
-                        <div class="offer_reviews">
-                            <div class="offer_reviews_content">
-                                <div class="offer_reviews_title">very good</div>
-                                <div class="offer_reviews_subtitle">100 reviews</div>
-                            </div>
-                            <div class="offer_reviews_rating text-center">8.1</div>
-                        </div>
+                        </div>                       
                     </div>
                 </div>
             </div>
         </div>
+    }
+
 }
 
 

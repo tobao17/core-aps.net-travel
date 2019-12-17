@@ -35,7 +35,7 @@ namespace WebDuLich.Controllers
                              tuyenDuong = td
 
                          };
-            return View(result);
+            return View(_db.ChiTietDatTours.ToList());
 
             //var result2 = from person in result
             //              join detail in tours on person.matour equals detail.MaTour
