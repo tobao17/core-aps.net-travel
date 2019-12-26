@@ -84,8 +84,13 @@ using WebDuLich.Models;
             BeginContext(151, 146, true);
             WriteLiteral("\r\n\r\n<link rel=\"stylesheet\"\r\n      href=\"https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700\">\r\n\r\n");
             EndContext();
+<<<<<<< HEAD
             BeginContext(297, 92, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "682023a802774500b1d37bd04ea6244f", async() => {
+=======
+            BeginContext(329, 58, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a1610a45c2f7489da0fb8fc405f4aba5", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -104,8 +109,13 @@ using WebDuLich.Models;
             BeginContext(389, 4, true);
             WriteLiteral("\r\n\r\n");
             EndContext();
+<<<<<<< HEAD
             BeginContext(393, 58, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "300f0819c1914ba88e456c82ee15b9d8", async() => {
+=======
+            BeginContext(397, 50, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8ddb4df7a07b4266b256583ea06fecd1", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -123,8 +133,13 @@ using WebDuLich.Models;
             BeginContext(451, 6, true);
             WriteLiteral("\r\n\r\n\r\n");
             EndContext();
+<<<<<<< HEAD
             BeginContext(457, 50, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "659e66415e1c46b5999726b97f4676ed", async() => {
+=======
+            BeginContext(573, 96, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "92a31ba9261c4e8599e66c6c97a75826", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -186,10 +201,17 @@ using WebDuLich.Models;
             <div class=""col-md-7 mb-5"">
                 ");
             EndContext();
+<<<<<<< HEAD
             BeginContext(1188, 2206, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3f6d207a57544743a1dc3438d119e9e0", async() => {
                 BeginContext(1250, 58, true);
                 WriteLiteral("\r\n\r\n                    <input type=\"hidden\" name=\"MaTour\"");
+=======
+            BeginContext(992, 2072, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fe15207dc3e417c927919f21de22e8c", async() => {
+                BeginContext(1054, 63, true);
+                WriteLiteral("\r\n\r\n                        <input  type=\"hidden\" name=\"MaTour\"");
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
                 EndContext();
                 BeginWriteAttribute("value", " value=\"", 1308, "\"", 1327, 1);
 #line 43 "C:\Users\ww\Desktop\WebDuLich\Views\Tours\booking.cshtml"
@@ -511,8 +533,13 @@ WriteAttributeValue(" ", 8647, ViewBag.matuyenduong, 8648, 21, false);
             BeginContext(8908, 73, true);
             WriteLiteral("\r\n\r\n                <div class=\"p-4 mb-3 bg-white\">\r\n                    ");
             EndContext();
+<<<<<<< HEAD
             BeginContext(8981, 101, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "14f6acfbfcf4440682fec5798dee8613", async() => {
+=======
+            BeginContext(3213, 91, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a97c3df34e0747358aefd8c15ccc3799", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

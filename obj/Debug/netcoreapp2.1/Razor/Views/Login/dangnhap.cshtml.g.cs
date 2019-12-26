@@ -63,7 +63,11 @@ using WebDuLich.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(58, 103, false);
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cae643c6367a41e3bc644dc1ca96cd92", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a4de559924ff4423bc7bebe18e0dd147", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
                 BeginContext(64, 90, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>dangnhap</title>\r\n");
                 EndContext();
@@ -83,7 +87,11 @@ using WebDuLich.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(163, 85, false);
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8969f94052ad4f138e05469764b57de6", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb16137ccf5b4b2a8dedb46e80f19045", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
                 BeginContext(169, 72, true);
                 WriteLiteral("\r\n    <div> \r\n        <h4>Ten dang nhap khong ton tai</h4>\r\n    </div>\r\n");
                 EndContext();

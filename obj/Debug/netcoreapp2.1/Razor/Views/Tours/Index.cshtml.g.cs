@@ -70,7 +70,11 @@ using WebDuLich.Models;
             WriteLiteral("\r\n\r\n\r\n<div class=\"home\">\r\n    <div class=\"home_background parallax-window\" data-parallax=\"scroll\">\r\n        ");
             EndContext();
             BeginContext(261, 96, false);
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "64bcd9bae8fc47318c96053aebc52797", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d98fdcb706714b578331ead58b16337f", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -234,8 +238,13 @@ WriteAttributeValue("", 1432, Url.Action("detailTour",new { id = item.MaTuyenDuo
                                         <ul class=""offers_icons_list"">
                                             <li class=""offers_icons_item"">  ");
             EndContext();
+<<<<<<< HEAD
             BeginContext(3004, 49, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "093332b3981e4b52b65df6e650ee109e", async() => {
+=======
+            BeginContext(2559, 49, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "44975458299d4bbe926c274d2567ca96", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -253,8 +262,13 @@ WriteAttributeValue("", 1432, Url.Action("detailTour",new { id = item.MaTuyenDuo
             BeginContext(3053, 83, true);
             WriteLiteral("</li>\r\n                                            <li class=\"offers_icons_item\">  ");
             EndContext();
+<<<<<<< HEAD
             BeginContext(3136, 52, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8c82b9f9bc154de9844b3ecee1e1be1a", async() => {
+=======
+            BeginContext(2691, 52, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b8fe5553d5874aeab563e30c7111c6fa", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -272,8 +286,13 @@ WriteAttributeValue("", 1432, Url.Action("detailTour",new { id = item.MaTuyenDuo
             BeginContext(3188, 83, true);
             WriteLiteral("</li>\r\n                                            <li class=\"offers_icons_item\">  ");
             EndContext();
+<<<<<<< HEAD
             BeginContext(3271, 52, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "fe407fa9ac944d1885cc797870959e0d", async() => {
+=======
+            BeginContext(2826, 52, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4945a58114ca41f8b2fd69e3fa52d44d", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -291,8 +310,13 @@ WriteAttributeValue("", 1432, Url.Action("detailTour",new { id = item.MaTuyenDuo
             BeginContext(3323, 131, true);
             WriteLiteral("</li>\r\n                                            <li class=\"offers_icons_item\">\r\n                                                ");
             EndContext();
+<<<<<<< HEAD
             BeginContext(3454, 53, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "6be1affad34a48a7a2a1c2e04b5671e7", async() => {
+=======
+            BeginContext(3009, 53, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "eefdc4e00ebc498c9277bc0ac267ead3", async() => {
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

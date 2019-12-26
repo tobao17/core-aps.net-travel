@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using WebDuLich.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Session;
 
 namespace WebDuLich
 {
@@ -39,6 +40,8 @@ namespace WebDuLich
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddMvc();
+            services.AddSession();
 
            
             services.AddDistributedMemoryCache();
@@ -52,6 +55,7 @@ namespace WebDuLich
                 options.Cookie.IsEssential = false;
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,9 +75,13 @@ namespace WebDuLich
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-           
-            app.UseAuthentication();
             app.UseSession();
+            app.UseAuthentication();
+<<<<<<< HEAD
+            app.UseSession();
+=======
+          
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

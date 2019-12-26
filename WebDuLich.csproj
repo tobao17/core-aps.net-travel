@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Areas\Admin\Views\Admin\aa.cshtml" />
     <None Include="Areas\Admin\Views\Admin\bb.cshtml" />
     <None Include="Areas\Admin\Views\Admin\Index.cshtml" />
@@ -36,6 +37,8 @@
     <None Include="Areas\Admin\Views\quanlyTuyenDuong\Edit.cshtml" />
     <None Include="Areas\Admin\Views\quanlyTuyenDuong\Index.cshtml" />
     <None Include="Areas\Admin\Views\Shared\Sharelayout.cshtml" />
+=======
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
     <None Include="Views\Login\dangnhap.cshtml" />
     <None Include="Views\Login\Index.cshtml" />
     <None Include="Views\Login\quenmatkhau.cshtml" />
@@ -241,7 +244,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
   </ItemGroup>

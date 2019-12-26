@@ -7,11 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 using WebDuLich.Data;
 using WebDuLich.Models;
 using WebDuLich.Models.DataModel;
+<<<<<<< HEAD
 using System.Net.Mail;
 using WebDuLich.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 using System.Security.Cryptography;
+=======
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
 
 namespace WebDuLich.Controllers
 {
@@ -23,6 +26,7 @@ namespace WebDuLich.Controllers
             _db = db;
         }
 
+<<<<<<< HEAD
         public static string MD5Hash(string input)
         {
             StringBuilder hash = new StringBuilder();
@@ -36,6 +40,8 @@ namespace WebDuLich.Controllers
             return hash.ToString();
         }
 
+=======
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
         public ActionResult Index()
         {
             return View();
@@ -45,9 +51,12 @@ namespace WebDuLich.Controllers
         {
 
             ViewBag.thongbao = "them tai khoan thanh cong";
+<<<<<<< HEAD
             custumer.HoTen = "";
             custumer.SDT = "";
             custumer.Password = MD5Hash(custumer.Password);
+=======
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             _db.KhachHangs.Add(custumer);
             _db.SaveChanges();
             //co the lay bang form conection 
@@ -59,6 +68,7 @@ namespace WebDuLich.Controllers
 
         {
             string name = f["name"].ToString();
+<<<<<<< HEAD
             string pass = MD5Hash(f["pass"].ToString());
 
 
@@ -90,23 +100,54 @@ namespace WebDuLich.Controllers
                 }
 
             }
+=======
+            string pass = f["pass"].ToString();
+         
+            {
+                KhachHang tv = _db.KhachHangs.SingleOrDefault(n => n.Username == name);
+                if (tv != null)
+                {
+                    HttpContext.Session.SetString("hoten","bao");
+                   return RedirectToAction("Index", "Home");
+                }
+            }
+            //else if (f["admin"] != null)
+            //{
+            //    ADMIN tv = db.USERs.SingleOrDefault(n => n.name == name && n.pass == pass);
+            //    if (tv != null)
+            //    {
+            //        Session["taikhoanad"] = tv.name;
+            //        Session["taikhoanidad"] = tv.adminid;
+            //        return RedirectToAction("Index", "quanlysanpham", new { area = "admin" });
+            //    }
+
+            //}
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
 
 
             return View();
         }
+<<<<<<< HEAD
         public IActionResult partialicon()
         {
            
             return PartialView();
         }
         public IActionResult dangxuat()
+=======
+        public ActionResult dangxuat(FormCollection f)
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
 
         {
 
             //Session["taikhoan"] = null;
             //Session["taikhoanid"] = null;
+<<<<<<< HEAD
             HttpContext.Session.SetString("hoten","");
             HttpContext.Session.SetString("khachhangid","");
+=======
+
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
 
             return RedirectToAction("Index", "Home");
         }
@@ -114,6 +155,7 @@ namespace WebDuLich.Controllers
         {
             return View();
         }
+<<<<<<< HEAD
         [HttpPost]
         public ActionResult quenmatkhau(string email)
         {
@@ -148,5 +190,7 @@ namespace WebDuLich.Controllers
             smtp.EnableSsl = true; //kích hoạt giao tiếp an toàn SSL
             smtp.Send(mail); //Gửi mail đi
         }
+=======
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
     }
 }
