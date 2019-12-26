@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Http
+@using WebDuLich.Extensions;
+@inject IHttpContextAccessor sessioon
+    <div class="user_box ml-auto">
+        @if (sessioon.HttpContext.Session.GetString("hoten") != null)
+        {
+            @if (sessioon.HttpContext.Session.GetString("hoten") != "")
+            {
+                <div class=" user_box_link">
+
+                    <p style="color:darkorange" class="mr-2">hi! @sessioon.HttpContext.Session.GetString("hoten")</p>
+                </div>
+                <div class="user_box_login user_box_link">
+                    <a asp-controller="Login" asp-action="dangxuat">Sign out</a>
+                </div>
+                <div class="user_box_register user_box_link"><a asp-controller="Cart" asp-action="Index">Cart(@sessioon.HttpContext.Session.GetString("count_tour"))</a></div>
+            }
+            else
+            {
+                <div class="user_box_login user_box_link"><a asp-controller="Login" asp-action="Index">login</a></div>
+                <div class="user_box_register user_box_link"><a asp-controller="Cart" asp-action="Index">Cart</a></div>
+            }
+
+        }
+        else
+        {
+            <div class="user_box_login user_box_link"><a asp-controller="Login" asp-action="Index">login</a></div>
+            <div class="user_box_register user_box_link"><a asp-controller="Cart" asp-action="Index">Cart</a></div>
+        }
+
+
+
+
+    </div>

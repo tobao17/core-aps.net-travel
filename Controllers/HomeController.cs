@@ -5,13 +5,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebDuLich.Models;
-
+using Microsoft.AspNetCore.Http;
+using WebDuLich.Extensions;
 namespace WebDuLich.Controllers
 {
     public class HomeController : Controller
     {
         public IActionResult Index()
         {
+         
             return View();
         }
 

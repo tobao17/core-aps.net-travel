@@ -1,0 +1,112 @@
+﻿
+@using WebDuLich.Models.DataModel;
+@model IEnumerable<ChiTietDatTour>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/Sharelayout.cshtml";
+}
+<link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+@{
+
+}
+<div class="containe " id="containe">
+    <div class="container border p-5">
+
+
+
+        <div class="row pb-5 mt-5 ">
+            <div class="col-sm-4 ">
+                <h5 class="font">VietTrabel</h5>
+                <small class="font">so 1 vo van ngan</small>
+
+            </div>         
+
+        </div>
+        <div class="row ">
+            <div class="col-sm-3">
+                <h5>Khách Hàng</h5>
+                <p class="font">@ViewBag.tenkhachhang</p>
+            </div>
+            <div class="col-sm-3">
+                <h5>Tour</h5>
+                <p class="font">@ViewBag.Tour </p>
+
+
+            </div>
+          
+        </div>
+        <div class="row mt-5 pt-2">
+            <div class="col-sm-12">
+                <table class="table ">
+                    <thead class="thead">
+                        <tr>
+                            <th scope="col">Ngày Đặt Tour</th>
+                            <th scope="col">Ngày Khởi Hành</th>
+
+                            <th scope="col">Ngày Kết Thúc</th>
+                            <th scope="col">Số Người Tham Gia Tour</th>
+                            <th scope="col">Tổng Tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     
+                        @foreach (var item in Model)
+                        {
+                           
+                            <tr>
+                                <td> @ViewBag.NgayDat</td>
+                                <td>@item.Tour.NgayKhoiHanh</td>
+                                <td>@item.Tour.NgayKetThuc</td>
+                                <td>@item.SoNguoiDiTour</td>
+
+
+
+                                <td>@item.TongTien$</td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+      
+        <div class="container mt-5 pt-5">
+            <p>Terms & Conditions</p>
+            <small>Payment is due within 15 day </small>
+            <br>
+            <small> Please make checks </small>
+        </div>
+    </div>
+    <div class="mt-3 ml-2 indonhang " id="indonhang">
+        <button type="button" class="btn btn-secondary px-4 py-1 ">Print bill</button>
+    </div>
+</div>
+
+
+<script>
+    $(".indonhang").click(function () {
+        var content = $(".containe").html();
+        InDonHang(content);
+    })
+
+    function InDonHang(content) {
+        var printWindow = window.open('', '', 'height=400,width=800');
+        printWindow.document.write('<html><head><title>DIV Contents</title>');
+        printWindow.document.write('</head><body >');
+        printWindow.document.write(content);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close(); printWindow.print();
+    }
+</script>
+<style>
+
+    .font {
+        font-family: 'Alata', sans-serif;
+    }
+
+    .containe {
+        padding: 0 20%;
+    }
+</style>

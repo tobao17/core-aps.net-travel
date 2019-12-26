@@ -1,137 +1,459 @@
-﻿@model IEnumerable<WebDuLich.Models.DataModel.ChiTietDatTour>
-    @{
-        ViewData["Title"] = "booking";
-        Layout = "~/Views/Shared/Sharelayout.cshtml";
-    }
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+﻿@model IEnumerable<WebDuLich.Models.DataModel.BinhLuan>
+@{
+    ViewData["Title"] = "booking";
+    Layout = "~/Views/Shared/Sharelayout.cshtml";
+}
 
 
-    <link rel="stylesheet" href="~/booking/bootstrap.min.css">
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+
+<link rel="stylesheet" type="text/css" href="~/booking/material-design-iconic-font.min.css">
+
+<link rel="stylesheet" href="~/booking/bootstrap.min.css">
 
 
-    <link rel="stylesheet" href="~/booking/style.css">
+<link rel="stylesheet" href="~/booking/style.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
 
 
-
-
-    <div class="home">
-        <div class="home_background parallax-window" data-parallax="scroll">
-            <img src="~/Travel_share/images/about_background.jpg" class="home_background parallax-window" />
-        </div>
-
-        <div class="home_content">
-            <div class="home_title">booking</div>
-        </div>
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll">
+        <img src="~/Travel_share/images/about_background.jpg" class="home_background parallax-window" />
     </div>
 
+    <div class="home_content">
+        <div class="home_title">booking</div>
+    </div>
+</div>
 
 
 
 
 
-    <div class="site-section bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 mb-5">
 
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 mb-5">
+                <form method="post" asp-action="booking" class="p-5 bg-white">
 
-
-                    <form method="post" asp-action="booking" class="p-5 bg-white">
-
-                        <input  type="hidden" name="MaTour" value="@ViewBag.id"/>
-                        <div class="row form-group">
-                            <div class="col-md-6 mb-3 mb-md-0">
-                                <label class="text-black" for="fname">First Name</label>
-                                <input type="text" id="fname" class="form-control" name="HoTen" placeholder="First Name">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="text-black" for="lname">Phone</label>
-                                <input type="text" id="lname" class="form-control" placeholder="Phone" name="SDT">
-                            </div>
+                    <input type="hidden" name="MaTour" value="@ViewBag.id" />
+                    <div class="row form-group">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <label class="text-black" for="fname">Name</label>
+                            <input type="text" id="fname" class="form-control" name="HoTen" placeholder="Name">
                         </div>
-
-                   
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <label class="text-black" for="treatment">How Many Person</label>
-                                <input type="text" id="" class="form-control" placeholder="" name="SoNguoiDiTour">
-
-                            </div>
+                        <div class="col-md-6">
+                            <label class="text-black" for="lname">Phone</label>
+                            <input type="text" id="lname" class="form-control" placeholder="Phone" name="SDT">
                         </div>
-
-                    
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <label class="text-black" for="note">Notes</label>
-                                <textarea name="Notes" id="note" cols="30" rows="5" class="form-control"
-                                          placeholder="Write your notes or questions here..."></textarea>
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <input type="submit" value="Send" class="btn btn-primary py-2 px-4 text-white">
-                            </div>
-                        </div>
-
-
-                    </form>
-                </div>
-                <div class="col-md-5">
-
-
-
-                    <div class="p-4 mb-3 bg-white">
-                        <img src="~/Travel_share/images/@ViewBag.image" alt="Image" class="img-fluid mb-4 rounded">
-                        <h3 class="h5 text-black mb-3">@ViewBag.tuyenduong</h3>
-                        <p>
-                         @ViewBag.noidung                 
-                        </p>
-                        <p><a href="#" class="btn btn-primary px-4 py-2 text-white">Learn More</a></p>
+                    </div>
+                    <div class="col-md-6" style="display:none">
+                        <label class="text-black" for="lname">Phone</label>
+                        <input type="text" id="lname" class="form-control" placeholder="Phone" name="giatour" value="@ViewBag.giatour">
                     </div>
 
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-black" for="treatment">How Many Person</label>
+                            <input type="text" id="" class="form-control" placeholder="" name="SoNguoiDiTour">
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-black" for="note">Notes</label>
+                            <textarea name="Notes" id="note" cols="30" rows="5" class="form-control"
+                                      placeholder="Write your notes or questions here..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <input type="submit" value="Send" class="btn btn-primary py-2 px-4 text-white">
+                        </div>
+                    </div>
+
+
+                </form>
+
+
+
+
+
+                <div class="col-sm-12  p-5 bg-white">
+                    <div class="p-b-30 ">
+                        <h5 class="mtext-108 cl2 p-b-7">
+                            comments
+                        </h5>
+                        <!-- Review -->
+                        @foreach (var item in Model)
+                        {
+                            if (item.MaTuyenDuong == ViewBag.matuyenduong)
+                            {
+                                <div class=" flex-t pb-2">
+                                    <div class="mr-3 mt-1">
+                                        <img src="~/images/TuyenDuongImage/departure.png" alt="AVATAR" style="border-radius: 50%;">
+                                    </div>
+
+                                    <div class="size-207">
+                                        <div class=" pb-3">
+                                            <span class="mtext-107 cl2 p-r-20">
+                                                @item.KhachHang.Username
+                                            </span>
+
+                                            <span class="fs-18 cl11">
+                                                @for (int i = 1; i <= item.vote; i++)
+                                                {
+                                                    <i class="fas fa-star" style="font-size: small;"></i>
+                                                }
+                                                @{
+                                                    int saorong = 5 - item.vote;
+
+                                                }
+                                                @for (int i = 1; i <= saorong; i++)
+                                                {
+                                                    <i class="far fa-star" style="font-size: small;"></i>
+
+                                                }
+
+
+                                            </span>
+                                        </div>
+
+                                        <p class="stext-102 cl6">
+                                            @*Quod autem in homine praestantissimum atque optimum est, id
+                            deseruit. Apud ceteros autem philosophos*@
+                                            @item.NoiDung
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            }
+
+                        }
+                        @if (ViewBag.soluongbinhluan >2)
+                        {
+                            <div class="d-flex justify-content-end pb-5">
+                                <a class="" style="right:0px" href="#">read more</a>
+                            </div>
+                        }
+
+
+                        <!-- Add review -->
+                        <form method="post" asp-action="comment" class="w-full">
+
+                            <h5 class="mtext-108 cl2 p-b-7">
+                                Add a review
+                            </h5>
+
+                            <p class="stext-102 cl6">
+                                Your email address will not be published. Required fields are marked *
+                            </p>
+
+                            <div class="flex-w flex-m pt-4 p-b-23">
+                                <span class="stext-102 cl3 m-r-16">
+                                    Your Rating
+                                </span>
+
+                                <span class="wrap-rating fs-18 cl11 pointer">
+                                    <i class="item-rating pointer far fa-star" style="font-size: small;"></i>
+                                    <i class="item-rating pointer far fa-star" style="font-size: small;"></i>
+                                    <i class="item-rating pointer far fa-star" style="font-size: small;"></i>
+                                    <i class="item-rating pointer far fa-star" style="font-size: small;"></i>
+                                    <i class="item-rating pointer far fa-star" style="font-size: small;"></i>
+                                    <input class="dis-none" type="number" name="vote">
+                                </span>
+                            </div>
+
+                            <div class="row p-b-25">
+                                <div class="col-12 p-b-5">
+                                    <label class="stext-102 cl3" for="review">Your review</label>
+                                    <textarea class="form-control" rows="3" id="comment" name="NoiDung"></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <input type="submit" value="submit" class="btn btn-primary py-2 px-4 text-white">
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="MaTour" value="@ViewBag.id" />
+                            <input type="hidden" name="MaTuyenDuong" value=" @ViewBag.matuyenduong" />
+
+                        </form>
+                    </div>
                 </div>
+
+            </div>
+            <div class="col-md-5">
+                @{ 
+                    var item1 = Model.First();
+                }
+
+
+                <div class="p-4 mb-3 bg-white">
+                    <img src="~/images/TuyenDuongImage/@item1.TuyenDuong.Anh" alt="Image" class="img-fluid mb-4 rounded">
+                    <h3 class="h5 text-black mb-3">@item1.TuyenDuong.TenTuyenDuong</h3>
+                    <p>
+                        @item1.TuyenDuong.NoiDung
+                    </p>
+                    <p><a asp-action="Index" asp-controller="Tours" class="btn btn-primary px-4 py-2 text-white">Learn More</a></p>
+                </div>
+
             </div>
         </div>
     </div>
-    <style>
-        .home {
-            width: 100%;
-            height: 465px;
-            background: transparent;
+</div>
+<script src="~/booking/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/booking/animsition.min.js"></script>
+<!--===============================================================================================-->
+
+<style>
+    .home {
+        width: 100%;
+        height: 465px;
+        background: transparent;
+    }
+
+    .home_background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .home_content {
+        position: absolute;
+        bottom: 106px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .home_title {
+        font-size: 72px;
+        font-weight: 800;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+</style>
+<style>
+    .flex-t {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .dis-none {
+        display: none;
+    }
+
+    .p-b-5 {
+        padding-bottom: 5px;
+    }
+
+    .p-b-25 {
+        padding-bottom: 25px;
+    }
+
+    .p-t-50 {
+        padding-top: 50px;
+    }
+
+    .p-b-7 {
+        padding-bottom: 7px;
+    }
+
+    .p-b-17 {
+        padding-bottom: 17px;
+    }
+
+    .p-b-68,
+    .p-tb-68,
+    .p-all-68 {
+        padding-bottom: 68px;
+    }
+
+    .p-b-30,
+    .p-tb-30,
+    .p-all-30 {
+        padding-bottom: 30px;
+    }
+
+    .flex-t {
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+    }
+
+    .cl0 {
+        color: #fff;
+    }
+
+    .cl1 {
+        color: #717fe0;
+    }
+
+    .cl2 {
+        color: #333;
+    }
+
+    .cl3 {
+        color: #666;
+    }
+
+    .cl4 {
+        color: #999;
+    }
+
+    .cl5 {
+        color: #222;
+    }
+
+    .cl6 {
+        color: #888;
+    }
+
+    .cl7 {
+        color: #b2b2b2;
+    }
+
+    .cl8 {
+        color: #555;
+    }
+
+    .cl9 {
+        color: #aaa;
+    }
+
+    .cl10 {
+        color: #1d1d1d;
+    }
+
+    .cl11 {
+        color: #f9ba48;
+    }
+
+    .cl12 {
+        color: #ccc;
+    }
+
+    .cl3 {
+        color: #666;
+    }
+
+    .stext-102 {
+        font-family: Poppins-Regular;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .cl0 {
+        color: #fff;
+    }
+
+    .size-112 {
+        min-width: 134px;
+        height: 43px;
+    }
+
+    .bg7 {
+        background-color: #333;
+    }
+
+    .bor11 {
+        border-radius: 21px;
+    }
+
+    .hov-btn3:hover {
+        border-color: #717fe0;
+        background-color: #717fe0;
+        color: #fff;
+    }
+
+        .hov-btn3:hover i {
+            color: #fff;
         }
 
-        .home_background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-        }
+    .trans-04 {
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
 
-        .home_content {
-            position: absolute;
-            bottom: 106px;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            -o-transform: translateX(-50%);
-            transform: translateX(-50%);
-        }
+    .m-l-auto {
+        margin-left: auto;
+    }
 
-        .home_title {
-            font-size: 72px;
-            font-weight: 800;
-            color: #FFFFFF;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-    </style>
+    .m-r-auto {
+        margin-right: auto;
+    }
 
+    .m-lr-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<script>
+    $('.wrap-rating').each(function () {
+        var item = $(this).find('.item-rating');
+        var rated = -1;
+        var input = $(this).find('input');
+        $(input).val(0);
+
+        $(item).on('mouseenter', function () {
+            var index = item.index(this);
+            var i = 0;
+            for (i = 0; i <= index; i++) {
+                $(item[i]).removeClass('far');
+                $(item[i]).addClass('fas');
+            }
+
+            for (var j = i; j < item.length; j++) {
+                $(item[j]).addClass('far');
+                $(item[j]).removeClass('fas');
+            }
+        });
+
+        $(item).on('click', function () {
+            var index = item.index(this);
+            rated = index;
+            $(input).val(index + 1);
+        });
+
+        $(this).on('mouseleave', function () {
+            var i = 0;
+            for (i = 0; i <= rated; i++) {
+                $(item[i]).removeClass('far');
+                $(item[i]).addClass('fas');
+            }
+
+            for (var j = i; j < item.length; j++) {
+                $(item[j]).addClass('far');
+                $(item[j]).removeClass('fas');
+            }
+        });
+    });
+</script>

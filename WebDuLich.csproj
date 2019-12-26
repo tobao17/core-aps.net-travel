@@ -10,9 +10,37 @@
     <Compile Remove="Migrations\20191207110527_database.Designer.cs" />
     <Compile Remove="Migrations\20191207111437_WebDuLich.cs" />
     <Compile Remove="Migrations\20191207111437_WebDuLich.Designer.cs" />
+    <Compile Remove="Migrations\20191207174904_WebDuLich.cs" />
+    <Compile Remove="Migrations\20191207174904_WebDuLich.Designer.cs" />
+    <Compile Remove="Migrations\20191208065127_WebDuLich.cs" />
+    <Compile Remove="Migrations\20191208065127_WebDuLich.Designer.cs" />
+    <Compile Remove="Migrations\20191208081259_WebDuLich.cs" />
+    <Compile Remove="Migrations\20191208081259_WebDuLich.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Admin\Views\Admin\aa.cshtml" />
+    <None Include="Areas\Admin\Views\Admin\bb.cshtml" />
+    <None Include="Areas\Admin\Views\Admin\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Home\_ViewImports.cshtml" />
+    <None Include="Areas\Admin\Views\Home\_ViewStart.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyDatTour\Details.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyDatTour\Index.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyKhuyenMai\Create.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyKhuyenMai\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyKhuyenMai\Index.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyTour\Create.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyTour\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyTour\Index.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyTuyenDuong\Create.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyTuyenDuong\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\quanlyTuyenDuong\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\Sharelayout.cshtml" />
+    <None Include="Views\Login\dangnhap.cshtml" />
+    <None Include="Views\Login\Index.cshtml" />
+    <None Include="Views\Login\quenmatkhau.cshtml" />
+    <None Include="wwwroot\Login\js\jquery-2.1.4.min.js" />
+    <None Include="wwwroot\Login\js\jquery.magnific-popup.js" />
     <None Include="wwwroot\Travel_share\fonts\beyond_the_mountains.otf" />
     <None Include="wwwroot\Travel_share\fonts\beyond_the_mountains.ttf" />
     <None Include="wwwroot\Travel_share\images\about_background.jpg" />
