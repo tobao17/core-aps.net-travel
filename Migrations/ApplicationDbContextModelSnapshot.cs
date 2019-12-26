@@ -263,6 +263,8 @@ namespace WebDuLich.Migrations
 
                     b.Property<string>("NgayDat");
 
+                    b.Property<string>("TinhTrang");
+
                     b.HasKey("MaDat");
 
                     b.HasIndex("MaKH");

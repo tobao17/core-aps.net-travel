@@ -1,0 +1,114 @@
+﻿@model IEnumerable<WebDuLich.Models.DataModel.TuyenDuong>
+@{
+    ViewData["Title"] = "TimKiem";
+    Layout = "~/Views/Shared/Sharelayout.cshtml";
+}
+
+<h2>TimKiem</h2>
+
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll">
+        <img src="~/Travel_share/images/about_background.jpg" class="home_background parallax-window" />
+    </div>
+
+    <div class="home_content">
+        <div class="home_title">our offers</div>
+    </div>
+</div>
+<div class="offers">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="section_title">@ViewBag.ThongBao</h2>
+            </div>
+        </div>
+        <div class="row offers_items">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <!-- Image by https://unsplash.comfixkensuarez -->
+                                    <div class="offers_image_background"
+                                         style="background-image: url('@Url.Content("~/images/TuyenDuongImage/"+item.Anh)')"></div>
+                                    <div class="offer_name"><a href="@Url.Action("detailTour",new { id = item.MaTuyenDuong })">@item.TenTuyenDuong</a></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <div class="offers_price">$70<span>@item.DiaDiemKhoiHanh</span></div>
+                                    <div class="rating_r rating_r_4 offers_rating">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <p class="offers_text">
+                                        @item.NoiDung
+                                    </p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item">  <img src="~/Travel_share/images/post.png" alt=""></li>
+                                            <li class="offers_icons_item">  <img src="~/Travel_share/images/compass.png" alt=""></li>
+                                            <li class="offers_icons_item">  <img src="~/Travel_share/images/bicycle.png" alt=""></li>
+                                            <li class="offers_icons_item">
+                                                <img src="~/Travel_share/images/sailboat.png" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="offers_link"><a href="@Url.Action("detailTour",new { id = item.MaTuyenDuong })">read more</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- Offers Item -->
+            <!-- Offers Item -->
+
+
+
+        </div>
+    </div>
+</div>
+<style>
+    .home {
+        width: 100%;
+        height: 465px;
+        background: transparent;
+    }
+
+    .home_background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .home_content {
+        position: absolute;
+        bottom: 106px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .home_title {
+        font-size: 72px;
+        font-weight: 800;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+</style>

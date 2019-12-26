@@ -95,7 +95,7 @@
                                     <div class="offers_image_container">
 
                                         <div class="offers_image_background"
-                                             style="background-image: url('@Url.Content("~/Travel_share/images/"+ViewBag.image)'); "></div>
+                                             style="background-image: url('@Url.Content("~/images/TuyenDuongImage/"+ViewBag.image)')"></div>
                                         <div class="offer_name"><a href="single_listing.html">@item.TuyenDuong.TenTuyenDuong</a></div>
                                     </div>
                                 </div>
@@ -111,9 +111,7 @@
                                         </div>
                                         <span class="offers_text">@item.NgayKhoiHanh-@item.NgayKetThuc</span>
                                         <p class="offers_text">
-                                            Suspendisse potenti. In faucibus massa. Lorem ipsum
-                                            dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.
-                                       
+                                            @ViewBag.noidung
                                         </p>
                                         <div class="offers_icons">
                                             <ul class="offers_icons_list">
@@ -132,7 +130,7 @@
                                             </ul>
                                         </div>
                                         <div class="button book_button">
-                                            <a href="@Url.Action("booking",new { id = item.MaTour,image=ViewBag.image,tuyenduong=item.TuyenDuong.TenTuyenDuong,noidung=item.TuyenDuong.NoiDung})">book<span></span><span></span><span></span></a>
+                                            <a href="@Url.Action("booking",new { id = item.MaTour})">book<span></span><span></span><span></span></a>
                                         </div>
                                         <div class="offer_reviews">
                                             <div class="offer_reviews_content">

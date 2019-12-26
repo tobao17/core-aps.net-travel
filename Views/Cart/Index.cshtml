@@ -1,11 +1,28 @@
 ﻿@using WebDuLich.Models.DataModel
 @model IEnumerable<ChiTietDatTour>
+<<<<<<< HEAD
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor sessioon
+=======
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
 @*@model IEnumerable<WebDuLich.Models.DataModel.ViewModel>;*@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Sharelayout.cshtml";
 }
 <style>
+<<<<<<< HEAD
+    li.offers_icons_item {
+        display: block;
+    }
+
+        li.offers_icons_item span {
+            font-weight: bold;
+            color: red;
+        }
+
+    .offers_content p {
+=======
     li.offers_icons_item{
         display: block;
     }
@@ -14,6 +31,7 @@
         color: red;
     }
     .offers_content p{
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
         font-size: 25px;
         font-weight: bold;
         color: black;
@@ -21,7 +39,11 @@
 </style>
 @foreach (var item in Model)
 {
+<<<<<<< HEAD
+    if (item.DatTour.MaKH == int.Parse(sessioon.HttpContext.Session.GetString("khachhangid")))
+=======
     if (item.DatTour.MaKH == 1)
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
     {
         <div class="offers_item rating_4" style="margin-top:100px">
             <div class="row">
@@ -58,8 +80,13 @@
                             </ul>
                         </div>
                         <div class="button book_button">
+<<<<<<< HEAD
+                            <a  href="@Url.Action("delete",new { id = item.MaDat })">Delete<span></span><span></span><span></span></a>
+                        </div>
+=======
                             <a href="">Delete<span></span><span></span><span></span></a>
                         </div>                       
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
                     </div>
                 </div>
             </div>

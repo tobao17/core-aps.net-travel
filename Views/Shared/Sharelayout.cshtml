@@ -16,8 +16,9 @@
     <link rel="stylesheet" type="text/css" href="~/Travel_share/styles/responsive.css">
     <link rel="stylesheet" type="text/css" href="~/Travel_share/styles/bootstrap4/bootstrap.min.css">
     <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
 
-
+    <link rel="stylesheet" type="text/css" href="~/Travel_share/styles/search.css">
 </head>
 <body>
 
@@ -92,15 +93,21 @@
                                     <li class="main_nav_item"><a asp-controller="Home" asp-action="Index">home</a></li>
                                     <li class="main_nav_item"><a asp-controller="Tours" asp-action="Index">offers</a></li>
                                     <li class="main_nav_item"><a href="~/Travel_share/about.html">about us</a></li>
-                            
+
                                     <li class="main_nav_item"><a href="~/Travel_share/blog.html">news</a></li>
                                     <li class="main_nav_item"><a href="~/Travel_share/contact.html">contact</a></li>
+
+                                    @*tìm kiếm*@
+                                    @using (Html.BeginForm("TimKiem", "Tours", FormMethod.Post))
+                                    {
+                                        <li class="search-box">
+                                            <input type="text" name="TenTuyenDuong" class="search-txt" placeholder="Type to search" />
+                                            <button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i> </button>
+                                        </li>
+                                    }
                                 </ul>
                             </div>
-                            <div class="user_box ml-auto">
-                                <div class="user_box_login user_box_link"><a href="~/Travel_share/#">login</a></div>
-                                <div class="user_box_register user_box_link"><a asp-controller="Cart" asp-action="Index">Cart</a></div>
-                            </div>
+                            @await Html.PartialAsync("../Login/partialicon.cshtml")
 
                             <form id="search_form" class="search_form bez_1">
                                 <input type="search" class="search_content_input bez_1">

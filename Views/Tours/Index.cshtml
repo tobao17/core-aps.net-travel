@@ -34,13 +34,23 @@
                                 <div class="offers_image_container">
                                     <!-- Image by https://unsplash.comfixkensuarez -->
                                     <div class="offers_image_background"
-                                         style="background-image: url('@Url.Content("~/Travel_share/images/"+item.Anh)')"></div>
+                                         style="background-image: url('@Url.Content("~/images/TuyenDuongImage/"+item.Anh)')"></div>
                                     <div class="offer_name"><a href="@Url.Action("detailTour",new { id = item.MaTuyenDuong })">@item.TenTuyenDuong</a></div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="offers_content">
-                                    <div class="offers_price">$70<span>@item.DiaDiemKhoiHanh</span></div>
+                                    @if (item.Sale.Mota != "Không")
+                                    {
+                                        <div class="offers_price">-@item.Sale.Mota<span>@item.DiaDiemKhoiHanh</span></div>
+
+
+                                                         }
+                                    else
+                                    {
+                                        <div class="offers_price">New<span>@item.DiaDiemKhoiHanh</span></div>
+
+                                                        }
                                     <div class="rating_r rating_r_4 offers_rating">
                                         <i></i>
                                         <i></i>

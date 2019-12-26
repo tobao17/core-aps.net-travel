@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebDuLich.Data;
 using WebDuLich.Models.DataModel;
+using Microsoft.AspNetCore.Http;
+using WebDuLich.Extensions;
+using Microsoft.EntityFrameworkCore;
+
 namespace WebDuLich.Controllers
 {
     public class CartController : Controller
@@ -14,8 +18,15 @@ namespace WebDuLich.Controllers
         {
             _db = db;
         }
-        public IActionResult Index()
+        public async Task< IActionResult> Index()
         {
+<<<<<<< HEAD
+            string id_text = HttpContext.Session.GetString("khachhangid");
+            if (id_text==null || id_text=="")
+            {
+                return RedirectToAction("Index", "Login");
+            }
+=======
             List<DatTour> datTours = _db.DatTours.ToList();
             List<ChiTietDatTour> chiTietDatTours = _db.ChiTietDatTours.ToList();
             List<Tour> tours = _db.Tours.ToList();
@@ -63,8 +74,23 @@ namespace WebDuLich.Controllers
 
 
 
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
 
+            var chitiet = _db.ChiTietDatTours.Include(m => m.DatTour).Include(m => m.Tour.TuyenDuong).Where(n=>n.DatTour.TinhTrang!="DaHuy");
+ 
+            return View(await chitiet.ToListAsync());
 
+           
+        }
+        public IActionResult delete(int id)
+        {
+            var datTour = _db.DatTours.SingleOrDefault(n=>n.MaDat==id);
+            datTour.TinhTrang = "DaHuy";
+            _db.SaveChanges();
+            var chitiet = _db.ChiTietDatTours.Include(m => m.DatTour).Include(m => m.Tour.TuyenDuong).Where(n => n.DatTour.TinhTrang != "DaHuy");
+            int a = int.Parse(HttpContext.Session.GetString("count_tour"));
+            HttpContext.Session.SetString("count_tour", (a - 1).ToString());
+            return RedirectToAction(nameof(Index),chitiet.ToListAsync());
         }
     }
 }

@@ -31,7 +31,7 @@ namespace WebDuLich
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
@@ -43,6 +43,17 @@ namespace WebDuLich
             services.AddMvc();
             services.AddSession();
 
+           
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+   
+                options.Cookie.HttpOnly = false;
+                // Make the session cookie essential
+                options.Cookie.IsEssential = false;
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             
         }
@@ -66,12 +77,23 @@ namespace WebDuLich
             app.UseCookiePolicy();
             app.UseSession();
             app.UseAuthentication();
+<<<<<<< HEAD
+            app.UseSession();
+=======
           
+>>>>>>> dc56b07597d4a4362228c462516e1c96425e1e25
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+            });
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                  name: "areas",
+                  template: "{area=admin}/{controller=Admin}/{action=Index}/{id?}"
+                );
             });
 
         }

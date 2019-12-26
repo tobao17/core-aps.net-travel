@@ -12,7 +12,7 @@ namespace WebDuLich.Models.DataModel
         [Key]
         public int MaDat { get; set; }
         public string NgayDat { get; set; }
-       
+        public string TinhTrang { get; set; }
         public int MaKH { get; set; }
         [ForeignKey("MaKH")]
         public virtual KhachHang KhachHang { get; set; }
